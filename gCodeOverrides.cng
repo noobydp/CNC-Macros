@@ -1,0 +1,20 @@
+# G-Codes
+[gcode_macro G1]
+rename_existing: G1_BASE
+gcode:
+    YOUR_CUSTOM_CODE
+
+[gcode_macro G3]
+rename_existing: G3_BASE
+gcode:
+    YOUR_CUSTOM_CODE
+
+[gcode_macro G21]
+rename_existing: G21_BASE
+gcode:
+    YOUR_CUSTOM_CODE
+
+[gcode_macro G90]
+rename_existing: G90_BASE
+gcode:
+    YOUR_CUSTOM_CODE
