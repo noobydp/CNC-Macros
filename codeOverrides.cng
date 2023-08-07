@@ -1,0 +1,66 @@
+# G-Codes
+
+# G1: Linear Move
+[gcode_macro G1]
+rename_existing: G1_BASE
+gcode:
+    # YOUR_CUSTOM_CODE
+    # Replace the above comment with your custom G1 command
+
+# G3: Circular Interpolation Counter Clockwise
+[gcode_macro G3]
+rename_existing: G3_BASE
+gcode:
+    # YOUR_CUSTOM_CODE
+    # Replace the above comment with your custom G3 command
+
+# G21: Set Units to Millimeters
+[gcode_macro G21]
+rename_existing: G21_BASE
+gcode:
+    # YOUR_CUSTOM_CODE
+    # Replace the above comment with your custom G21 command
+
+# G90: Set to Absolute Positioning
+[gcode_macro G90]
+rename_existing: G90_BASE
+gcode:
+    # YOUR_CUSTOM_CODE
+    # Replace the above comment with your custom G90 command
+
+# M-Codes
+
+# M3: Start the spindle clockwise
+[gcode_macro M3]
+rename_existing: M3_BASE
+gcode:
+    # YOUR_CUSTOM_CODE
+    # Replace the above comment with your custom M3 command
+
+# M5: Stop Spindle
+[gcode_macro M5]
+rename_existing: M5_BASE
+gcode:
+    # YOUR_CUSTOM_CODE
+    # Replace the above comment with your custom M5 command
+
+# M117: Display Message
+[gcode_macro M117]
+rename_existing: M117_BASE
+gcode:
+    # YOUR_CUSTOM_CODE
+    # Replace the above comment with your custom M117 command
+
+# M400: Finish all moves
+[gcode_macro M400]
+rename_existing: M400_BASE
+gcode:
+    # YOUR_CUSTOM_CODE
+    # Replace the above comment with your custom M400 command
+
+# M453: Set to CNC mode
+[gcode_macro M453]
+rename_existing: M453_BASE
+gcode:
+    # YOUR_CUSTOM_CODE
+    # Replace the above comment with your custom M453 command
