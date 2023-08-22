@@ -3,7 +3,6 @@ CNC Macros for Klipper
 
 Heaviy inspired by Klippy-cnc: https://github.com/vladbabii/klippy-cnc/tree/master
 
-# WARNING - THIS HAS NOT BEEN TESTED TO ACTUALLY WORK WITH A JOB
 
 ## Overview
 * Simplified macros to override standard move macros: G0 to G3
