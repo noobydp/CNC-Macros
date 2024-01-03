@@ -11,7 +11,7 @@ Here's how I setup my dashboard with the macros I actually use.
 
 ## Features
 * **Workspace Management**: Macros for setting, adjusting, and recalling workspace coordinates, crucial for precision and repeatability in CNC operations.
-**Custom Command Overrides**: Redefines standard G-code commands to include workspace offsets, ensuring accurate movements.
+* **Custom Command Overrides**: Redefines standard G-code commands to include workspace offsets, ensuring accurate movements.
 * **Specialized Operations**: Includes specific macros for tasks like slab flattening and probing, adding automation and precision to CNC processes.
 * **Enhanced Machine Control**: Macros for spindle control, emergency stops, and firmware restarts, improving safety and usability.
 
@@ -59,7 +59,9 @@ Probing Z is the same - EXCEPT - I install the actual endmill I will use so the 
 ## G-Code Macros
 ### Workspace Macros
 Macros designed for managing workspace coordinates, essential for CNC machining precision.
-The workspace offets are managed manually and regular move commands have been overriden to include the offset adjustment.
+The workspace offets are managed manually and regular move commands have been overriden to include the offset adjustment. 
+
+**To Do** I want to investigate if we can use the built-in [SET_GCODE_OFFSET](https://github.com/Klipper3d/klipper/blob/master/docs/G-Codes.md#set_gcode_offset) feature in Klipper.
 
 | Macro | Description |
 | ----- | ----------- |
