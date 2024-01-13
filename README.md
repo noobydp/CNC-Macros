@@ -1,16 +1,16 @@
 # CNC-Macros
 Enhanced CNC Macros for Klipper Firmware
 
-Drawing inspiration from Klippy-cnc ([https://github.com/vladbabii/klippy-cnc/tree/master](https://github.com/vladbabii/klippy-cnc/tree/master)), this collection of CNC macros is specifically designed for 3-axis CNC machines like the 3018. It brings advanced capabilities in workspace management, custom movement commands, and specialized operations for CNC machining, elevating precision and functionality.
+Drawing inspiration from Klippy-cnc ([https://github.com/vladbabii/klippy-cnc/tree/master](https://github.com/vladbabii/klippy-cnc/tree/master)), this collection of CNC macros is specifically designed for 3-axis CNC machines like the 3018 / 3040 / 6040, but should work on any. It brings advanced capabilities in workspace management, custom movement commands, and specialized operations for CNC machining, elevating precision and functionality.
 
-Note: Not all macros are meant for direct execution. Some serve as references for other macros or override standard behavior.
+The macros make use of the built-in SET_GCODE_OFFSET command to set the workpiece offset.
 
 ![Workspace Macros](Macro%20UI.png)
 
 ## Features
-- **Workspace Management**: Comprehensive set of macros for defining, adjusting, and recalling workspace coordinates. These are crucial for precision and repeatability in CNC machining.
-- **Custom Command Overrides**: Customizes standard G-code commands to incorporate workspace offsets, ensuring movement accuracy.
-- **Specialized Operations**: A range of specific macros tailored for tasks like slab flattening and probing, enhancing automation and precision in CNC tasks.
+- **Workspace Management**: Comprehensive set of macros for defining, adjusting, and recalling workspace coordinates.
+- **Custom Command Overrides**: Customizes standard G-code commands to incorporate workspace offset.
+- **Specialized Operations**: A range of specific macros tailored for tasks like slab flattening and probing.
 - **Enhanced Machine Control**: Macros for controlling the spindle, emergency stops, and firmware restarts, augmenting safety and ease of use.
 
 ### File Structure
@@ -22,7 +22,12 @@ Combined, these files significantly improve control, accuracy, and safety in CNC
 
 ## Usage
 1. Download the `.cfg` files or clone the repo into `~/printer_data/config` or your chosen directory.
-2. Include the `.cfg` files in your `printer.cfg`:
+2. add the [save_variables] section to your `printer.cfg`:
+```
+[save_variables]
+filename:/home/pi/printer_data/config/savedVariables.cfg
+```
+3. Include the `.cfg` files in your `printer.cfg`:
 ```
 [include CNC-Macros/codeOverrides.cfg]
 [include CNC-Macros/workspaceMacro.cfg]
@@ -33,8 +38,8 @@ Combined, these files significantly improve control, accuracy, and safety in CNC
 ### Simple Job Setup
 1. Home the machine.
 2. Jog to the start position (e.g., stock Top, Front, Left as 0,0,0 in Fusion 360 CAM).
-3. Use `SET_WORKSPACE_FROM_TOOL` to set X, Y, Z offsets.
-4. Optionally, use `SAVE_VARIABLES` to save offsets to a file.
+3. Use `SET_OFFSET_FROM_TOOL` to set X, Y, Z offsets.
+4. Optionally, use `SAVE_OFFSETS` to save offsets to a file.
 5. Start the job.
 6. Profit.
 
